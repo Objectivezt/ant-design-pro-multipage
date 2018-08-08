@@ -1,8 +1,8 @@
 module.exports = {
   parser: 'babel-eslint',
-  //extends: ['airbnb', 'prettier'],
-  extends:'eslint-config-react-app',
-  env: {
+  extends: ['airbnb', 'prettier'],
+  //extends: 'eslint-config-react-app',
+  env: { //脚本运行的环境
     browser: true,
     node: true,
     es6: true,
@@ -10,11 +10,13 @@ module.exports = {
     jest: true,
     jasmine: true,
   },
-  rules: {
+  rules: { //开启的规则项目
     'generator-star-spacing': [0],
     'consistent-return': [0],
     'react/forbid-prop-types': [0],
-    'react/jsx-filename-extension': [1, { extensions: ['.js'] }],
+    'react/jsx-filename-extension': [1, {
+      extensions: ['.js']
+    }],
     'global-require': [1],
     'import/prefer-default-export': [0],
     'react/jsx-no-bind': [0],
@@ -46,7 +48,7 @@ module.exports = {
     'no-bitwise': [0],
     'no-cond-assign': [0],
     'import/no-unresolved': [0],
-    'comma-dangle': [
+    'comma-dangle': [ // 字面量的项尾是可以有逗号？
       'error',
       {
         arrays: 'always-multiline',

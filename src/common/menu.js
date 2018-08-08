@@ -29,7 +29,7 @@ const menuData = [
     children: [
       {
         name: '用户管理',
-        path: 'userManager',
+        path: 'UserManager',
       },
       {
         name: '角色管理',

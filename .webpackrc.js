@@ -16,6 +16,7 @@ export default {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
+    globleConfig :path.resolve(__dirname,'src/common/config')
   },
   ignoreMomentLocale: true,
   theme: './src/common/theme.js',

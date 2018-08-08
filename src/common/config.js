@@ -17,13 +17,13 @@ export const globalBigListSize = {
 };
 
 export const globalFormItemLayout = {
-  labelCol: { sm: { span: 6 } },
-  warpperCol: { sm: { span: 18 } },
+  labelCol: { sm: { span: 8 } },
+  warpperCol: { sm: { span: 16 } },
 };
 
 export const defaultSelect = {
   placeholder: '请输入或选择',
-  style: { width: '100%' },
+  style: { width: '200px' },
 }
 
 export const globalRequire = {
@@ -37,14 +37,22 @@ export const globalPagination = {
   pageSizeOptions: ['1', '5', '10', '20', '30', '50', '100', '200'],
 };
 
-export const gloablAdvanceSelect = {
+export const globalAdvanceSelect = {
   showSearch: true,
   allowClear: true,
   optionFilterProps: 'Children',
 }
 
-export const cardProps = {
+export const globalCardProps = {
   type: 'inner',
   hoverable: true,
   bordered: true,
+  style: {marginBottom:'20px'},
+}
+
+export const globalTableProps = {
+  bordered: true,
+  size: 'small',
+  showHeader: true,
+  locale: {'emptyText' : '暂无数111据'},
 }

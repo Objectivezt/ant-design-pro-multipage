@@ -136,6 +136,22 @@ const proxy = {
     });
   },
 
+  'POST /setting/queryUserByPage': (req, res) => {
+    const { pageNum, pageSize } = req.body;
+    if (pageNum === '1' && pageSize === '10') {
+      res.send({
+        total: 12,
+        list: [],
+      });
+      return;
+    } else {
+      res.send({
+        total: 0,
+        list: [],
+      });
+    }
+  },
+
   'GET /login/getMens': {
     code: '0000',
     msg: '',
