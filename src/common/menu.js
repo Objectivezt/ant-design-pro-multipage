@@ -35,6 +35,10 @@ const menuData = [
         name: '角色管理',
         path: 'RoleManager',
       },
+      {
+        name: '权限申请',
+        path: 'RequestAuth',
+      },
     ],
   },
   // {
