@@ -262,9 +262,9 @@ class BasicLayout extends React.PureComponent {
               onNoticeVisibleChange={this.handleNoticeVisibleChange}
             />
           </Header>
-          <Content style={{ margin: '12px 24px 0', height: '100%', borderLeft: '1px solid #e8e8e8' }}>
+          <Content style={{ margin: '0', height: '100%', borderLeft: '1px solid #e8e8e8' }}>
             <TabController {...tasParams} />
-            {/* <Switch>
+            {/* <Switch
                 {redirectData.map(item => (
                   <Redirect key={item.from} exact from={item.from} to={item.to} />
                 ))}
@@ -287,27 +287,27 @@ class BasicLayout extends React.PureComponent {
             <GlobalFooter
               links={[
                 {
-                  key: 'Pro 首页',
-                  title: 'Pro 首页',
-                  href: 'http://pro.ant.design',
+                  key: 'Objectivezt',
+                  title: 'Objectivezt',
+                  href: 'http://objectivezt',
                   blankTarget: true,
                 },
                 {
                   key: 'github',
                   title: <Icon type="github" />,
-                  href: 'https://github.com/ant-design/ant-design-pro',
+                  href: 'https://github.com/Jack-Rose',
                   blankTarget: true,
                 },
                 {
-                  key: 'Ant Design',
-                  title: 'Ant Design',
-                  href: 'http://ant.design',
+                  key: 'pro-multipage',
+                  title: 'pro-multipage',
+                  href: 'https://github.com/Jack-Rose/ant-desgin-pro-multipagen',
                   blankTarget: true,
                 },
               ]}
               copyright={
                 <Fragment>
-                  Copyright <Icon type="copyright" /> 2018 蚂蚁金服体验技术部出品
+                  Copyright <Icon type="copyright" /> Objectivezt
                 </Fragment>
               }
             />

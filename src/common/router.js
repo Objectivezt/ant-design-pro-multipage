@@ -82,19 +82,19 @@ export const getRouterData = app => {
   const routerConfig = {
     '/': {
       component: dynamicWrapper(app, ['user', 'login'], () =>
-        import ('../layouts/BasicLayout')),
+        import('../layouts/BasicLayout')),
     },
     '/dashboard/analysis': {
       component: dynamicWrapper(app, ['chart'], () =>
-        import ('../containers/Dashboard/Analysis')),
+        import('../containers/Dashboard/Analysis')),
     },
     '/dashboard/monitor': {
       component: dynamicWrapper(app, ['monitor'], () =>
-        import ('../containers/Dashboard/Monitor')),
+        import('../containers/Dashboard/Monitor')),
     },
     '/dashboard/workplace': {
       component: dynamicWrapper(app, ['project', 'activities', 'chart'], () =>
-        import ('../containers/Dashboard/Workplace')
+        import('../containers/Dashboard/Workplace')
       ),
       // hideInBreadcrumb: true,
       // name: '工作台',
@@ -103,16 +103,21 @@ export const getRouterData = app => {
 
     '/setting/settingChart': {
       component: dynamicWrapper(app, [], () =>
-        import ('../containers/Setting/SettingChart')),
+        import('../containers/Setting/SettingChart')),
     },
 
-    '/setting/UserManager': {
+    '/home/backlog': {
+      name: '待办事项',
+      component: dynamicWrapper(app, [], () => import ('../containers/Home/Backlog'))
+    },
+
+    '/setting/user-manager': {
       name:'用户管理',
       component: dynamicWrapper(app, ['settings/userManagerModel'], () =>
       import ('../containers/Setting/UserManager')),
     },
 
-    '/setting/RequestAuth': {
+    '/setting/request-auth': {
       name: '权限申请',
       component: dynamicWrapper(app, [], () =>
       import ('../containers/Setting/RequestAuth')),

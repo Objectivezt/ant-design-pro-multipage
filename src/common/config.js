@@ -47,12 +47,20 @@ export const globalCardProps = {
   type: 'inner',
   hoverable: true,
   bordered: true,
-  style: {marginBottom:'20px'},
+  style: { marginBottom: '20px' },
 }
 
 export const globalTableProps = {
   bordered: true,
   size: 'small',
   showHeader: true,
-  locale: {'emptyText' : '暂无数111据'},
+  locale: {'emptyText' : '暂无数据'},
+}
+
+export const globalRowProps = {
+  gutter: {xs:32,sm:24,md:16,lg:8}
+}
+
+export const globalColProps = {
+  xs:16,sm:8,md:6,lg:4,xl:4,xxl:4,
 }

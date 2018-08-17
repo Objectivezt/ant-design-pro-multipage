@@ -6,6 +6,7 @@ import {
   Tree,
   Input,
 } from 'antd';
+import PageHeader from 'components/PageHeader';
 import {
   globalCardProps,
 } from 'globleConfig';
@@ -121,39 +122,44 @@ class RequestAuth extends Component {
   render() {
     return (
       <Fragment>
-        <Row>
-          <Col span="11">
-            <Card
-              {...globalCardProps}
-              title="角色权限申请"
-            >
-              <Search style={{ marginBottom: 8 }} placeholder="Search" onChange={this.onChange} />
-              <Tree
-                defaultExpandAll="true"
-                showLine="true"
-                draggable="true"
-                checkable
-                autoExpandParent="true"
-                onCheck={this.onCheck}
-                checkedKeys={this.state.checkedKeys}
-                onSelect={this.onSelect}
-                selectedKeys={this.state.selectedKeys}
+        <PageHeader
+          breadcrumbList={[{}]}
+          content={
+            <Row>
+            <Col span="11">
+              <Card
+                {...globalCardProps}
+                title="角色权限申请"
               >
-                {this.renderTreeNodes(treeData)}
-              </Tree>
-            </Card>
-          </Col>
-          <Col span="1">{}</Col>
-          <Col span="11">
-            <Card
-              {...globalCardProps}
-              title="用户组权限申请"
-            >
-              123
-            </Card>
-          </Col>
-          <Col span="1">{}</Col>
-        </Row>
+                <Search style={{ marginBottom: 8 }} placeholder="Search" onChange={this.onChange} />
+                <Tree
+                  defaultExpandAll="true"
+                  showLine="true"
+                  draggable="true"
+                  checkable
+                  autoExpandParent="true"
+                  onCheck={this.onCheck}
+                  checkedKeys={this.state.checkedKeys}
+                  onSelect={this.onSelect}
+                  selectedKeys={this.state.selectedKeys}
+                >
+                  {this.renderTreeNodes(treeData)}
+                </Tree>
+              </Card>
+            </Col>
+            <Col span="1">{}</Col>
+            <Col span="11">
+              <Card
+                {...globalCardProps}
+                title="用户组权限申请"
+              >
+                123
+              </Card>
+            </Col>
+            <Col span="1">{}</Col>
+          </Row>
+          }
+        />
       </Fragment>
     );
   }

@@ -2,25 +2,16 @@ import { isUrl } from '../utils/utils';
 
 const menuData = [
   {
-    name: 'dashboard',
-    icon: 'dashboard',
-    path: 'dashboard',
+    name: '系统首页',
+    icon: 'home',
+    path: 'home',
     children: [
       {
-        name: '分析页',
-        path: 'analysis',
-      },
-      {
-        name: '监控页',
-        path: 'monitor',
-      },
-      {
-        name: '工作台',
-        path: 'workplace',
-        // hideInBreadcrumb: true,
-        // hideInMenu: true,
-      },
-    ],
+        name: '待办事项',
+        path: 'backlog',
+        icon: 'solution',
+      }
+    ]
   },
   {
     name: '系统管理',
@@ -29,18 +20,39 @@ const menuData = [
     children: [
       {
         name: '用户管理',
-        path: 'UserManager',
+        path: 'user-manager',
       },
-      {
-        name: '角色管理',
-        path: 'RoleManager',
-      },
+      // {
+      //   name: '角色管理',
+      //   path: 'role-manager',
+      // },
       {
         name: '权限申请',
-        path: 'RequestAuth',
+        path: 'request-auth',
       },
     ],
   },
+  // {
+  //   name: 'dashboard',
+  //   icon: 'dashboard',
+  //   path: 'dashboard',
+  //   children: [
+  //     {
+  //       name: '分析页',
+  //       path: 'analysis',
+  //     },
+  //     {
+  //       name: '监控页',
+  //       path: 'monitor',
+  //     },
+  //     {
+  //       name: '工作台',
+  //       path: 'workplace',
+  //       // hideInBreadcrumb: true,
+  //       // hideInMenu: true,
+  //     },
+  //   ],
+  // },
   // {
   //   name: '表单页',
   //   icon: 'form',

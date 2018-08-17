@@ -16,6 +16,7 @@ import {
   defaultSelect,
   globalDefineListSize,
 } from 'globleConfig';
+import PageHeader from 'components/PageHeader';
 import { connect } from 'dva'
 
 const FormItem = Form.Item;
@@ -72,7 +73,6 @@ const filterListObj = {
   pageSize: 10,
 }
 
-
 class UserManager extends Component {
   constructor(props) {
     super(props);
@@ -108,54 +108,60 @@ class UserManager extends Component {
     const { resTotal,resList } = userManagerModel;
     return (
       <Fragment>
-        <Card
-          {...globalCardProps}
-          title="信息筛选"
-        >
-          <Form onSubmit={this.handleSubmit}>
-            <Row>
-              <Col span={16}>
-                <FormItem label="账户名" {...globalFormItemLayout}>
-                  {
-                    getFieldDecorator('abc')(
-                      <Select {...defaultSelect}>
-                        <Option key={123}>123</Option>
-                      </Select>
-                    )
-                  }
-                </FormItem>
-              </Col>
-              <Col span={8}>
-                <ButtonGroup>
-                  <Button type="primary" icon="search" htmlType="submit">
-                    查询
-                  </Button>
-                  <Button type="danger" icon="reload" onClick={this.handleReset}>
-                    重置
-                  </Button>
-                </ButtonGroup>
-              </Col>
-            </Row>
-          </Form>
-        </Card>
-
-        <Card
-          {...globalCardProps}
-          title="信息列表"
-        >
-          <Tooltip  >
-            <Table
-              {...globalTableProps}
-              columns={tableColumnsProp}
-              dataSource={resList}
-              loading={loading}
-              pagination={{
-                current:pageNum,
-                total: resTotal,
-              }}
-            />
-          </Tooltip>
-        </Card>
+        <PageHeader
+          breadcrumbList={[{}]}
+          content={
+            <Fragment>
+              <Card
+                {...globalCardProps}
+                title="信息筛选"
+              >
+                <Form onSubmit={this.handleSubmit}>
+                  <Row>
+                    <Col span={16}>
+                      <FormItem label="账户名" {...globalFormItemLayout}>
+                        {
+                          getFieldDecorator('abc')(
+                            <Select {...defaultSelect}>
+                              <Option key={123}>123</Option>
+                            </Select>
+                          )
+                        }
+                      </FormItem>
+                    </Col>
+                    <Col span={8}>
+                      <ButtonGroup>
+                        <Button type="primary" icon="search" htmlType="submit">
+                          查询
+                        </Button>
+                        <Button type="danger" icon="reload" onClick={this.handleReset}>
+                          重置
+                        </Button>
+                      </ButtonGroup>
+                    </Col>
+                  </Row>
+                </Form>
+              </Card>
+              <Card
+              {...globalCardProps}
+              title="信息列表"
+            >
+              <Tooltip  >
+                <Table
+                  {...globalTableProps}
+                  columns={tableColumnsProp}
+                  dataSource={resList}
+                  loading={loading}
+                  pagination={{
+                    current:pageNum,
+                    total: resTotal,
+                  }}
+                />
+              </Tooltip>
+            </Card>
+          </Fragment>
+          }
+        />
       </Fragment>
     )
   }
