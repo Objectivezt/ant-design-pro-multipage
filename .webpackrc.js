@@ -27,7 +27,7 @@ export default {
   //   from:'./favicon.ico',
   //   to:'./',
   // }],
-  devtool: 'false',
+  devtool: 'true',
   disableDynamicImport: false,
   publicPath: '/',
   outputPath: './dist',

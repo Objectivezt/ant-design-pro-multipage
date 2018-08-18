@@ -108,7 +108,7 @@ export const getRouterData = app => {
 
     '/home/backlog': {
       name: '待办事项',
-      component: dynamicWrapper(app, [], () => import ('../containers/Home/Backlog'))
+      component: dynamicWrapper(app, ['home/backlogModel'], () => import ('../containers/Home/Backlog'))
     },
 
     '/setting/user-manager': {
@@ -122,6 +122,8 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () =>
       import ('../containers/Setting/RequestAuth')),
     },
+
+
 
     '/form/basic-form': {
       component: dynamicWrapper(app, ['form'], () =>

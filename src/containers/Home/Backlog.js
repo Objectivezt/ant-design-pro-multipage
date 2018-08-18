@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { connect } from 'dva';
 import {
   Card,
   Icon,
@@ -26,59 +27,61 @@ const tableColumnsProp = [
   },
 ];
 
+const BacklogCardRender = (item) =>{
+  return (
+      <Card
+        {...globalCardProps}
+        actions={
+          [
+            <Icon type="setting" />,
+            <Icon type="edit" />,
+            <Icon type="ellipsis" />
+          ]
+        }>
+        <Meta
+          title={item.num}
+          className={styles.cardMate}
+          description={item.description}
+        />
+      </Card>
+  )
+}
+
+const TableRender = () => {
+  return (
+    <Table
+    {...globalTableProps}
+    columns={tableColumnsProp}
+    />
+  )
+}
+/**
+ * @description 待办
+ */
+@connect(({ backlogModel }) => ({ backlogModel }))
 class Backlog extends Component {
+
   constructor(props) {
     super(props)
     this.state = {
-      num: 1,
-      cardlist: [
-        {
-          num: '1',
-          description:'全部待办'
-        },
+      cardList: [
         {
           num: '0',
-          description:'XX待办'
-        },
-        {
-          num: '2',
-          description:'XXX待办'
+          description:'全部待办'
         }
-      ]
+      ],
     }
   }
 
-  TableRender(){
-    return (
-      <Table
-      {...globalTableProps}
-      columns={tableColumnsProp}
-      />
-    )
-  }
-
-  BacklogCardRender(item){
-    return (
-        <Card
-          {...globalCardProps}
-          actions={
-            [
-              <Icon type="setting" />,
-              <Icon type="edit" />,
-              <Icon type="ellipsis" />
-            ]
-          }>
-          <Meta
-            title={item.num}
-            className={styles.cardMate}
-            description={item.description}
-          />
-        </Card>
-    )
+  componentDidMount() {
+    this.props.dispatch({
+      type: 'backlogModel/filterList',
+    })
   }
 
   render() {
-    const { cardlist } = this.state;
+    const { backlogModel } = this.props;
+    const { cardList } = backlogModel;
     return (
       <Fragment>
         <PageHeader
@@ -87,14 +90,14 @@ class Backlog extends Component {
             <Fragment>
               <Row {...globalRowProps}>
                 {
-                  cardlist.map((item, index) => (
+                  cardList.map((item, index) => (
                     <Col {...globalColProps} key={index}>
-                      {this.BacklogCardRender(item)}
+                      {BacklogCardRender(item)}
                     </Col>
                   ))
                 }
               </Row>
-              {this.TableRender()}
+              {TableRender()}
             </Fragment>
           } />
       </Fragment>
@@ -103,5 +106,3 @@ class Backlog extends Component {
 }
 
 export default Backlog;
-
-

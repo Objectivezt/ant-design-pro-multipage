@@ -152,6 +152,28 @@ const proxy = {
     }
   },
 
+  'POST /home/queryBacklog': (req, res) => {
+    res.send({
+      code:'0000',
+      data: {
+        cardList: [
+          {
+            num: '1',
+            description:'全部待办'
+          },
+          {
+            num: '0',
+            description:'XX待办'
+          },
+          {
+            num: '2',
+            description:'XXX待办'
+          }
+        ]
+      }
+    })
+  },
+
   'GET /login/getMens': {
     code: '0000',
     msg: '',
