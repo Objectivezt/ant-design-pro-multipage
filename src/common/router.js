@@ -113,17 +113,18 @@ export const getRouterData = app => {
 
     '/setting/user-manager': {
       name:'用户管理',
-      component: dynamicWrapper(app, ['settings/userManagerModel'], () =>
-      import ('../containers/Setting/UserManager')),
+      component: dynamicWrapper(app, ['settings/userManagerModel'], () => import('../containers/Setting/UserManager')),
     },
 
     '/setting/request-auth': {
       name: '权限申请',
-      component: dynamicWrapper(app, [], () =>
-      import ('../containers/Setting/RequestAuth')),
+      component: dynamicWrapper(app, [], () => import ('../containers/Setting/RequestAuth')),
     },
 
-
+    '/basic/btn': {
+      name:'按钮',
+      component: dynamicWrapper(app,[],()=> import('../containers/UI/Button/index'))
+    },
 
     '/form/basic-form': {
       component: dynamicWrapper(app, ['form'], () =>

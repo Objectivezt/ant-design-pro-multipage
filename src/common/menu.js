@@ -32,6 +32,17 @@ const menuData = [
       },
     ],
   },
+  {
+    name: '常用组件',
+    path: 'basic',
+    icon: 'book',
+    children: [
+      {
+        name: '按钮',
+        path: 'btn',
+      }
+    ]
+  }
 
 
   // {
