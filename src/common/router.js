@@ -126,78 +126,78 @@ export const getRouterData = app => {
       component: dynamicWrapper(app,[],()=> import('../containers/UI/Button/index'))
     },
 
-    '/form/basic-form': {
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/BasicForm')),
-    },
-    '/form/step-form': {
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/StepForm')),
-    },
-    '/form/step-form/info': {
-      name: '分步表单（填写转账信息）',
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/StepForm/Step1')),
-    },
-    '/form/step-form/confirm': {
-      name: '分步表单（确认转账信息）',
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/StepForm/Step2')),
-    },
-    '/form/step-form/result': {
-      name: '分步表单（完成）',
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/StepForm/Step3')),
-    },
-    '/form/advanced-form': {
-      component: dynamicWrapper(app, ['form'], () =>
-        import ('../containers/Forms/AdvancedForm')),
-    },
-    '/list/table-list': {
-      component: dynamicWrapper(app, ['rule'], () =>
-        import ('../containers/List/TableList')),
-    },
-    '/list/basic-list': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/BasicList')),
-    },
-    '/list/card-list': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/CardList')),
-    },
-    '/list/search': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/List')),
-    },
-    '/list/search/projects': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/Projects')),
-    },
-    '/list/search/applications': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/Applications')),
-    },
-    '/list/search/articles': {
-      component: dynamicWrapper(app, ['list'], () =>
-        import ('../containers/List/Articles')),
-    },
-    '/profile/basic': {
-      component: dynamicWrapper(app, ['profile'], () =>
-        import ('../containers/Profile/BasicProfile')),
-    },
-    '/profile/advanced': {
-      component: dynamicWrapper(app, ['profile'], () =>
-        import ('../containers/Profile/AdvancedProfile')
-      ),
-    },
-    '/result/success': {
-      component: dynamicWrapper(app, [], () =>
-        import ('../containers/Result/Success')),
-    },
-    '/result/fail': {
-      component: dynamicWrapper(app, [], () =>
-        import ('../containers/Result/Error')),
-    },
+    // '/form/basic-form': {
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/BasicForm')),
+    // },
+    // '/form/step-form': {
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/StepForm')),
+    // },
+    // '/form/step-form/info': {
+    //   name: '分步表单（填写转账信息）',
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/StepForm/Step1')),
+    // },
+    // '/form/step-form/confirm': {
+    //   name: '分步表单（确认转账信息）',
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/StepForm/Step2')),
+    // },
+    // '/form/step-form/result': {
+    //   name: '分步表单（完成）',
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/StepForm/Step3')),
+    // },
+    // '/form/advanced-form': {
+    //   component: dynamicWrapper(app, ['form'], () =>
+    //     import ('../containers/Forms/AdvancedForm')),
+    // },
+    // '/list/table-list': {
+    //   component: dynamicWrapper(app, ['rule'], () =>
+    //     import ('../containers/List/TableList')),
+    // },
+    // '/list/basic-list': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/BasicList')),
+    // },
+    // '/list/card-list': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/CardList')),
+    // },
+    // '/list/search': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/List')),
+    // },
+    // '/list/search/projects': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/Projects')),
+    // },
+    // '/list/search/applications': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/Applications')),
+    // },
+    // '/list/search/articles': {
+    //   component: dynamicWrapper(app, ['list'], () =>
+    //     import ('../containers/List/Articles')),
+    // },
+    // '/profile/basic': {
+    //   component: dynamicWrapper(app, ['profile'], () =>
+    //     import ('../containers/Profile/BasicProfile')),
+    // },
+    // '/profile/advanced': {
+    //   component: dynamicWrapper(app, ['profile'], () =>
+    //     import ('../containers/Profile/AdvancedProfile')
+    //   ),
+    // },
+    // '/result/success': {
+    //   component: dynamicWrapper(app, [], () =>
+    //     import ('../containers/Result/Success')),
+    // },
+    // '/result/fail': {
+    //   component: dynamicWrapper(app, [], () =>
+    //     import ('../containers/Result/Error')),
+    // },
     '/exception/403': {
       component: dynamicWrapper(app, [], () =>
         import ('../containers/Exception/403')),
