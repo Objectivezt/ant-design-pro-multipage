@@ -5,7 +5,26 @@ import PageHeader from 'components/PageHeader';
 import { globalCardProps } from 'globleConfig';
 
 const { Component, Fragment } = React;
-const Panel = Collapse.Panel;
+const { Panel } = Collapse;
+const ButtonGroup = Button.Group;
+
+const ButtonProps = {
+  disabled: false,
+  ghost: false,
+  href: 'String',
+  htmlType: 'button',
+  icon:'-',
+  loading: false,
+  shape: 'circle',
+  size: 'small',
+  target: 'String',
+  type: 'primary',
+  onClick: function () {
+
+  },
+  block: true,
+}
+
 
 const BasicButton = () => {
   const input = `
@@ -293,6 +312,60 @@ const LoadingButton = () => {
   );
 };
 
+const GroupButton = () => {
+  const input = `
+  <ButtonGroup>
+    <Button>
+      按
+    </Button>
+    <Button>
+      钮
+    </Button>
+  </ButtonGroup>`;
+  return (
+    <Row gutter="8">
+      <Col span="24">
+        <Card
+          {...globalCardProps}
+          title="按钮组"
+          extra={
+            <Popover
+              title="size"
+              content="button-components-props === loading"
+            >
+              属性
+            </Popover>
+          }
+        >
+          <Collapse bordered={false}>
+            <Panel
+              header={
+                <Row>
+                  <Col offset="4" span="8">
+                    <Tooltip title="loading={false}'" placement="top">
+                      <ButtonGroup>
+                        <Button>
+                           按
+                        </Button>
+                        <Button>
+                           钮
+                        </Button>
+                      </ButtonGroup>
+                    </Tooltip>
+                  </Col>
+                </Row>
+              }
+              key="1"
+            >
+              <ReactMarkdown source={input} />
+            </Panel>
+          </Collapse>
+        </Card>
+      </Col>
+    </Row>
+  )
+}
+
 const content = () => {
   return (
     <Fragment>
@@ -301,6 +374,7 @@ const content = () => {
       {SizeButton()}
       {DisabledButton()}
       {LoadingButton()}
+      {GroupButton()}
     </Fragment>
   );
 };

@@ -9,7 +9,11 @@ const menuData = [
     children: [
       {
         name: '按钮',
-        path: 'btn',
+        path: 'button',
+      },
+      {
+        name: '输入框',
+        path: 'input',
       }
     ]
   },

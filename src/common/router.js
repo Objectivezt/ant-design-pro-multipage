@@ -121,9 +121,14 @@ export const getRouterData = app => {
       component: dynamicWrapper(app, [], () => import ('../containers/Setting/RequestAuth')),
     },
 
-    '/basic/btn': {
+    '/basic/button': {
       name:'按钮',
       component: dynamicWrapper(app,[],()=> import('../containers/UI/Button/index'))
+    },
+
+    '/basic/input': {
+      name:'输入框',
+      component: dynamicWrapper(app,[],()=> import('../containers/UI/Input/index'))
     },
 
     // '/form/basic-form': {
