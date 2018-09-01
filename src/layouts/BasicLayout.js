@@ -15,7 +15,7 @@ import NotFound from '../containers//Exception/404';
 import { getRoutes } from '../utils/utils';
 import Authorized from '../utils/Authorized';
 import { getMenuData } from '../common/menu';
-import logo from '../assets/logo.svg';
+import logo from '../assets/favicon.ico';
 import TabController from './TabController';
 import { isUrl } from '../utils/utils';
 import reqwest from 'reqwest';
@@ -118,10 +118,8 @@ class BasicLayout extends React.PureComponent {
       url: '/login/getMens',
       mothod: 'GET',
       success: (res) => {
-        console.log(res);
       },
       error: (res) => {
-
       },
     })
   }
@@ -131,7 +129,7 @@ class BasicLayout extends React.PureComponent {
   getPageTitle() {
     const { routerData, location } = this.props;
     const { pathname } = location;
-    let title = 'Ant Design Pro';
+    let title = 'multipage';
     let currRouterData = null;
     // match params path
     Object.keys(routerData).forEach(key => {
@@ -140,7 +138,7 @@ class BasicLayout extends React.PureComponent {
       }
     });
     if (currRouterData && currRouterData.name) {
-      title = `${currRouterData.name} - Ant Design Pro`;
+      title = `${currRouterData.name} - multipage`;
     }
     return title;
   }

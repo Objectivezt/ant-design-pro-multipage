@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, Redirect, Switch, Route } from 'dva/router';
 import DocumentTitle from 'react-document-title';
 import styles from './UserLayout.less';
-import logo from '../assets/logo.svg';
+import logo from '../assets/favicon.ico';
 import { getRoutes } from '../utils/utils';
 
 

@@ -17,7 +17,7 @@ import {
   globalDefineListSize,
 } from 'globleConfig';
 import PageHeader from 'components/PageHeader';
-import { connect } from 'dva'
+import { connect } from 'dva';
 
 const FormItem = Form.Item;
 const ButtonGroup = Button.Group;
