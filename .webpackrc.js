@@ -4,10 +4,27 @@ const proxyUrl = {
   changeOrigin: true,
   pathRewrite: { '^/': '' },
 }
-export default {
-  entry: 'src/index.js',
+const config = {
+  entry: 'src/index.ts',
   extraBabelPlugins: [
-    ['import', { libraryName: 'antd', libraryDirectory: 'es', style: true }],
+    [
+      'import',
+      {
+        libraryName: 'antd',
+        libraryDirectory: 'es',
+        style: true
+      },
+      'antd'
+    ],
+    [
+      'import',
+      {
+        libraryName: 'loadsh',
+        libraryDirectory: '',
+        camel2DashComponentName: false,
+      },
+      'lodash'
+    ]
   ],
   env: {
     development: {
@@ -16,7 +33,7 @@ export default {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
-    globleConfig :path.resolve(__dirname,'src/common/config')
+    globleConfig: path.resolve(__dirname, 'src/common/config')
   },
   ignoreMomentLocale: true,
   theme: './src/common/theme.js',
@@ -27,6 +44,7 @@ export default {
   //   from:'./favicon.ico',
   //   to:'./',
   // }],
+  //extraResolveExtensions:['', '.ts', '.tsx', '.js'],
   devtool: 'false',
   disableDynamicImport: false,
   publicPath: '/',
@@ -36,3 +54,5 @@ export default {
     '/usrApi': proxyUrl,
   }
 };
+
+export default config;
