@@ -5,7 +5,7 @@
 module.exports = config => {
   config.module.rules.unshift({
     test: /\.yaml$/,
-    use: ['json-loader', 'yaml-loader'],
+    use: ['json-loader', 'yaml-loader','ts-loader'],
   });
 
   config.module.rules.forEach(r => {

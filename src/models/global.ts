@@ -1,6 +1,7 @@
+import { GloablModelState, GlobalModal } from '../models/global.d';
 import { queryNotices } from '../services/api';
 
-export default {
+const globalModel: GlobalModal = {
   namespace: 'global',
 
   state: {
@@ -25,7 +26,7 @@ export default {
         type: 'saveClearedNotices',
         payload,
       });
-      const count = yield select(state => state.global.notices.length);
+      const count = yield select((state: {global:GloablModelState}) => state.global.notices.length);
       yield put({
         type: 'user/changeNotifyCount',
         payload: count,
@@ -49,19 +50,22 @@ export default {
     saveClearedNotices(state, { payload }) {
       return {
         ...state,
-        notices: state.notices.filter(item => item.type !== payload),
+        notices: state.notices.filter((item:any) => item.type !== payload),
       };
     },
   },
 
-  subscriptions: {
-    setup({ history }) {
-      // Subscribe history(url) change, trigger `load` action if pathname is `/`
-      return history.listen(({ pathname, search }) => {
-        if (typeof window.ga !== 'undefined') {
-          window.ga('send', 'pageview', pathname + search);
-        }
-      });
-    },
-  },
+  // subscriptions: {
+  //   setup({ history }) {
+  //     // Subscribe history(url) change, trigger `load` action if pathname is `/`
+  //     return history.listen(({ pathname, search }) => {
+  //       if (typeof window.ga !== 'undefined') {
+  //         window.ga('send', 'pageview', pathname + search);
+  //       }
+  //     });
+  //   },
+  // },
 };
+
+
+export default globalModel;

@@ -63,4 +63,10 @@
     "**/*.js",
     "**/*.jsx",
   ],
+  "files": [
+    "./src/index.d.ts",
+    "./src/models/global.d.ts"
+  ]
 }
+
+

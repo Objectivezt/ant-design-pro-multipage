@@ -1,11 +1,9 @@
-import {
-  createElement,
-} from 'react';
+import { createElement } from 'react';
 import dynamic from 'dva/dynamic';
 import pathToRegexp from 'path-to-regexp';
-import {
-  getMenuData,
-} from './menu';
+import { map } from 'lodash';
+import { getMenuData } from './menu';
+
 
 let routerDataCache;
 
