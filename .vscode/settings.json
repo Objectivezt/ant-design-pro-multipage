@@ -8,4 +8,5 @@
   "editor.formatOnSave": false,
   "editor.formatOnPaste": false,
   "javascript.format.enable": true,
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
 }

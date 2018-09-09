@@ -51,7 +51,7 @@ const BasicButton = () => {
                 <Row>
                   <Col offset={2} span="4">
                     <Tooltip title="type='primary'" placement="top">
-                      <Button type="primary">主按钮</Button>
+                      <Button type="primary" id="primary">主按钮</Button>
                     </Tooltip>
                   </Col>
                   <Col offset={2} span="4">

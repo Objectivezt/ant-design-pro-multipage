@@ -1,4 +1,4 @@
-import { GloablModelState, GlobalModal } from '../models/global.d';
+import { GloablModelState, GlobalModal } from '../models/global.d';// eslint-disable-line
 import { queryNotices } from '../services/api';
 
 const globalModel: GlobalModal = {

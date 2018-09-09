@@ -10,7 +10,7 @@ describe('Login', () => {
 
   beforeEach(async () => {
     page = await browser.newPage();
-    await page.goto('http://localhost:8000/#/user/login');
+    await page.goto('http://localhost:3000/#/user/login');
     await page.evaluate(() => window.localStorage.setItem('antd-pro-authority', 'guest'));
   });
 
@@ -29,7 +29,7 @@ describe('Login', () => {
     await page.click('button[type="submit"]');
     await page.waitForSelector('.ant-layout-sider h1'); // should display error
     const text = await page.evaluate(() => document.body.innerHTML);
-    expect(text).toContain('<h1>Ant Design Pro</h1>');
+    expect(text).toContain('<h1>multipage</h1>');
   });
 
   afterAll(() => browser.close());
