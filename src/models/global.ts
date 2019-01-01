@@ -1,5 +1,26 @@
-import { GloablModelState, GlobalModal } from '../models/global.d';// eslint-disable-line
 import { queryNotices } from '../services/api';
+import { Effect } from 'dva';
+import { Reducer } from 'redux';
+
+export type GlobalModelState = {
+  collapsed: boolean;
+  notices: any[];
+}
+
+export type GlobalModal = {
+  namespace: 'global',
+  state: GlobalModelState,
+  effects: {
+    fetchNotices: Effect;
+    clearNotices: Effect;
+  },
+  reducers: {
+    changeLayoutCollapsed: Reducer<any>;
+    saveNotices: Reducer<any>;
+    saveClearedNotices: Reducer<any>;
+  };
+}
+
 
 const globalModel: GlobalModal = {
   namespace: 'global',
@@ -26,7 +47,7 @@ const globalModel: GlobalModal = {
         type: 'saveClearedNotices',
         payload,
       });
-      const count = yield select((state: {global:GloablModelState}) => state.global.notices.length);
+      const count = yield select((state: {global:GlobalModelState}) => state.global.notices.length);
       yield put({
         type: 'user/changeNotifyCount',
         payload: count,

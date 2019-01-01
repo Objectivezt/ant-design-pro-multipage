@@ -4,7 +4,8 @@ module.exports = {
     require.resolve('./tests/setup.js'),
   ],
   transform: {
-    '\\.jsx?$': require.resolve('./tests/transformers/jsTransformer'),
+    '\\.js?$': require.resolve('./tests/transformers/jsTransformer'),
+    '\\.ts?$': require.resolve('./tests/transformers/tsTransformer'),
   },
   testMatch: ['**/?(*.)(spec|test|e2e).(j|t)s?(x)'],
   moduleFileExtensions: ['js', 'jsx', 'ts', 'tsx'],

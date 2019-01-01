@@ -13,7 +13,7 @@ import {
   globalRowProps,
   globalColProps,
   globalTableProps,
-} from 'globleConfig';
+} from 'globalConfig';
 import styles from '../../styles/Home/backlog.less';
 
 const { Meta } = Card;

@@ -4,6 +4,7 @@
   "gitlens.advanced.messages": {
     "suppressShowKeyBindingsNotice": true
   },
+  "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnType": true,
   "editor.formatOnSave": false,
   "editor.formatOnPaste": false,

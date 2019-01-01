@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "components/*": ["./src/components/*"],
+      "layouts/*":["./src/layouts/*"],
+      "containers/*": ["./src/containers/*"],
+      "models/*":["./src/models/*"],
+      "services/*":["./src/services/*"],
+      "globalConfig":["./src/common/config.js"],
+    },
+  },
+}

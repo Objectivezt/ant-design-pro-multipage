@@ -9,7 +9,7 @@ import {
 import PageHeader from 'components/PageHeader';
 import {
   globalCardProps,
-} from 'globleConfig';
+} from 'globalConfig';
 
 const { TreeNode } = Tree;
 const {Search} = Input;

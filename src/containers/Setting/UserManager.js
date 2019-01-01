@@ -15,7 +15,7 @@ import {
   globalTableProps,
   defaultSelect,
   globalDefineListSize,
-} from 'globleConfig';
+} from 'globalConfig';
 import PageHeader from 'components/PageHeader';
 import { connect } from 'dva';
 

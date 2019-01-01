@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as ReactMarkdown from 'react-markdown';
 import { Button, Row, Col, Card, Tooltip, Popover, Collapse, message } from 'antd';
 import PageHeader from 'components/PageHeader';
-import { globalCardProps } from 'globleConfig';
+import { globalCardProps } from 'globalConfig';
 
 const { Component, Fragment } = React;
 const { Panel } = Collapse;

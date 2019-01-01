@@ -1,4 +1,3 @@
-
 import dva, { DvaOption, DvaInstance, Model } from 'dva';
 import { Extend } from './utils/misc';
 

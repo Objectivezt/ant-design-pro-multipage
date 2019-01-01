@@ -1,7 +1,7 @@
 import React, { Component,Fragment } from 'react'
 import { Input } from 'antd';
 import PageHeader from 'components/PageHeader';
-import { globalCardProps } from 'globleConfig';
+import { globalCardProps } from 'globalConfig';
 
 const inputProps = {
   addonBefore : 'String',

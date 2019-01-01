@@ -34,7 +34,11 @@ const config = {
   },
   alias: {
     components: path.resolve(__dirname, 'src/components/'),
-    globleConfig: path.resolve(__dirname, 'src/common/config')
+    layouts:path.resolve('src/layouts/'),
+    containers: path.resolve('src/containers/'),
+    models:path.resolve('src/models/'),
+    services:path.resolve('src/services/'),
+    globalConfig: path.resolve(__dirname, 'src/common/config')
   },
   ignoreMomentLocale: true,
   theme: './src/common/theme.js',
